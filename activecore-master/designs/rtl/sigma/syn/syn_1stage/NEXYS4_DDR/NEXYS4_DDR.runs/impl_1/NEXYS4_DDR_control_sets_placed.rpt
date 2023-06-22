@@ -1,0 +1,235 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Thu Nov 17 00:22:05 2022
+| Host         : DESKTOP-2FOCHV5 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file NEXYS4_DDR_control_sets_placed.rpt
+| Design       : NEXYS4_DDR
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   157 |
+|    Minimum number of control sets                        |   157 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    87 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   157 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     7 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |   141 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              40 |           21 |
+| No           | No                    | Yes                    |               4 |            2 |
+| No           | Yes                   | No                     |             276 |          131 |
+| Yes          | No                    | No                     |             217 |           96 |
+| Yes          | No                    | Yes                    |           24928 |         7001 |
+| Yes          | Yes                   | No                     |            1624 |          583 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+|      Clock Signal      |                                          Enable Signal                                          |                     Set/Reset Signal                     | Slice Load Count | Bel Load Count |
++------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+|  sys_clk/inst/clk_out1 | sigma/udm/uart_tx/tx_o_i_1_n_0                                                                  | sigma/reset_sync/Q[0]                                    |                1 |              1 |
+|  sys_clk/inst/clk_out1 | sigma/udm/uart_rx/FSM_sequential_state[3]_i_1_n_0                                               | sigma/reset_sync/Q[0]                                    |                1 |              4 |
+|  sys_clk/inst/clk_out1 |                                                                                                 | sigma/reset_sync/arst                                    |                2 |              4 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/E[0]                                                                     | sigma/reset_sync/SR[0]                                   |                1 |              4 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/bus_addr_bo_reg[5]                                                       | sigma/sigma_tile/riscv/bus_addr_bo_reg[3]                |                2 |              5 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/tx_dout_bo[7]_i_1_n_0                                                  |                                                          |                2 |              7 |
+|  sys_clk/inst/clk_out1 | sigma/udm/uart_tx/databuf_0                                                                     | sigma/reset_sync/Q[0]                                    |                2 |              8 |
+|  sys_clk/inst/clk_out1 | sigma/udm/uart_rx/dout_bo[7]_i_1_n_0                                                            | sigma/reset_sync/Q[0]                                    |                2 |              8 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/RD_DATA_reg[23]_i_1_n_0                                                | sigma/udm/udm_controller/RD_DATA_reg[31]_i_1_n_0         |                7 |              8 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/tx_sendbyte_ff_0                                                       |                                                          |                3 |              8 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/tx_sendbyte[7]_i_2_n_0                                                 | sigma/udm/udm_controller/tx_sendbyte[7]_i_1_n_0          |                2 |              8 |
+|  sys_clk/inst/clk_out1 |                                                                                                 | sigma/udm/uart_rx/SR[0]                                  |                2 |              9 |
+|  sys_clk/inst/clk_out1 |                                                                                                 | sigma/udm/udm_controller/FSM_sequential_state[2]_i_1_n_0 |                6 |              9 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/bus_we_o_reg_2                                                           | sigma/sigma_tile/riscv/bus_we_o_reg_0                    |                4 |             11 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/bus_we_o_reg_2                                                           | sigma/sigma_tile/riscv/bus_we_o_reg_1                    |                4 |             11 |
+|  sys_clk/inst/clk_out1 |                                                                                                 | sigma/reset_sync/SR[0]                                   |                9 |             14 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/bus_we_o_reg_5                                                         | sigma/udm/udm_controller/bus_req_o_reg_1                 |                4 |             16 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/bus_we_o_reg_5                                                         |                                                          |                4 |             16 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/bus_we_o_reg_3[0]                                                        | sigma/reset_sync/SR[0]                                   |                6 |             16 |
+|  sys_clk/inst/clk_out1 |                                                                                                 | sigma/reset_sync/Q[0]                                    |               11 |             17 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/cur_index[6]_i_1_n_0                                    | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                6 |             20 |
+|  sys_clk/inst/clk_out1 | sigma/debouncer/counter_reg[0]_i_1_n_0                                                          | sigma/reset_sync/Q[0]                                    |                5 |             20 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/RD_DATA_reg[23]_i_1_n_0                                                |                                                          |               14 |             24 |
+|  sys_clk/inst/clk_out1 | sigma/udm/uart_rx/bitperiod_o[28]_i_1_n_0                                                       | sigma/reset_sync/Q[0]                                    |               11 |             30 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/genexu_MUL_DIV/riscv_divider/dividend_q[31]_i_1_n_0                            | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                8 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/genexu_MUL_DIV/riscv_divider/divisor_q[62]_i_1_n_0                             | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               11 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/bus_addr_bo[31]_i_1_n_0                                                | sigma/udm/udm_controller/FSM_sequential_state[2]_i_1_n_0 |                8 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[18][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               10 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/timeout_counter[31]_i_1_n_0                                            |                                                          |               12 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/tr_length[31]_i_2_n_0                                                  | sigma/udm/udm_controller/tr_length[31]_i_1_n_0           |               13 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/sfr/timer_value[31]_i_2_n_0                                                    | sigma/reset_sync/reset_syncbuf_reg[0]_0[0]               |                5 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[11][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                8 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[10][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               17 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[13][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                8 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[12][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                7 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[14][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               23 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[15][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                7 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[24][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               13 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[25][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               12 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[30][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               19 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[20][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               12 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[19][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               11 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[17][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                9 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[21][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               13 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[26][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                8 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[28][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               15 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[29][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               22 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[2][31]_i_1_n_0                         | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                9 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[23][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                8 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[16][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                7 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[22][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               10 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[1][31]_i_1_n_0                         | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               11 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[27][31]_i_1_n_0                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               13 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[4][31]_i_1_n_0                         | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               13 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[3][31]_i_1_n_0                         | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               10 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[7][31]_i_1_n_0                         | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               12 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[8][31]_i_1_n_0                         | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                7 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[9][31]_i_1_n_0                         | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |                9 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[6][31]_i_1_n_0                         | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               20 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/udm/uart_rx/clk_counter                                                                   | sigma/reset_sync/Q[0]                                    |                6 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/core_reset_o_reg_5[0]                                                    | sigma/reset_sync/SR[0]                                   |               10 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_regfile[5][31]_i_1_n_0                         | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               11 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/bus_wdata_bo[31]_i_1_n_0                                               | sigma/udm/udm_controller/FSM_sequential_state[2]_i_1_n_0 |                6 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/udm/uart_tx/clk_counter                                                                   | sigma/reset_sync/Q[0]                                    |                7 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/genpsticky_glbl_regfile                                                  | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               26 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/genpsticky_glbl_jump_vector_cmd                                          | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               15 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/stream_resp_bus_genfifo_wdata_bo[rd0_wdata][31]_i_1_n_0 |                                                          |               21 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/genexu_MUL_DIV/riscv_divider/div_complete_w                                    | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               13 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/genexu_MUL_DIV/riscv_divider/dividend_q                                        | sigma/sigma_tile/sfr/core_reset_o_reg_2[0]               |               10 |             32 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/riscv/gensticky_genpsticky_glbl_MRETADDR[31]_i_1_n_0                           | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               19 |             36 |
+|  sys_clk/inst/clk_out1 |                                                                                                 |                                                          |               21 |             40 |
+|  sys_clk/inst/clk_out1 | sigma/udm/udm_controller/E[0]                                                                   |                                                          |               15 |             48 |
+|  sys_clk/inst/clk_out1 | sigma/reset_sync/E[0]                                                                           |                                                          |               25 |             50 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/genexu_MUL_DIV/riscv_divider/divisor_q                                         | sigma/sigma_tile/sfr/core_reset_o_reg_2[0]               |               20 |             62 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[17][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               14 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[34][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               18 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/A[10][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               16 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[19][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               17 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[16][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               12 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/A[32][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               19 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/A[36][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               21 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[21][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               13 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[12][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               22 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[23][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               14 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[27][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               17 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[20][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               17 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[29][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               10 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[33][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               11 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/A[1][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               16 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[35][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               17 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/A[3][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               18 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[0][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               19 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[13][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               18 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[14][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               13 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[24][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               16 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/A[26][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               14 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/A[11][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               18 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/A[31][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               14 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[18][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               11 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[22][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               15 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[25][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               16 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[4][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               20 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[57][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               16 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[37][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               15 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[40][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               14 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[52][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               14 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[56][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               18 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[59][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               21 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[63][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               20 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[53][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               17 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[39][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               16 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[46][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               14 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[51][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               16 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[45][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               22 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[61][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               29 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[6][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               26 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[43][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               18 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[60][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               25 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[54][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               10 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[5][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               14 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[8][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               21 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[38][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               17 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[7][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               25 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[55][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               12 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[44][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               20 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[50][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               16 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[49][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               18 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[62][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               15 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[9][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               27 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[42][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               18 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[47][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               13 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[41][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               16 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[58][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               27 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[48][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               13 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[28][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               18 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[30][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               16 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[2][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               16 |             64 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/B[15][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               12 |             64 |
+|  sys_clk/inst/clk_out1 |                                                                                                 | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               45 |            111 |
+|  sys_clk/inst/clk_out1 |                                                                                                 | sigma/sigma_tile/riscv/gensticky_genpstage_EXEC_TRX_BUF  |               58 |            116 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/C[16][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               43 |            256 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/C[8][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               68 |            256 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/C[0][31]_i_1_n_0                                        | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               50 |            256 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/C[32][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               43 |            256 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/C[56][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               70 |            256 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/C[24][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               71 |            256 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/C[48][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               39 |            256 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/C[40][31]_i_1_n_0                                       | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |               74 |            256 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/mul_reg[0][55][31]_i_1_n_0                              | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |              561 |           2048 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/mul_reg[1][55][31]_i_1_n_0                              | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |              563 |           2048 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/mul_reg[2][55][31]_i_1_n_0                              | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |              557 |           2048 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/mul_reg[3][55][31]_i_1_n_0                              | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |              648 |           2048 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/mul_reg[6][55][31]_i_1_n_0                              | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |              590 |           2048 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/mul_reg[4][55][31]_i_1_n_0                              | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |              557 |           2048 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/mul_reg[7][55][31]_i_1_n_0                              | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |              762 |           2048 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/mul_reg[5][55][31]_i_1_n_0                              | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |              559 |           2048 |
+|  sys_clk/inst/clk_out1 | sigma/sigma_tile/coproc_custom0_wrapper/Result                                                  | sigma/sigma_tile/sfr/core_reset_o_reg_0_BUFG             |              649 |           2380 |
++------------------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------+------------------+----------------+
+
+

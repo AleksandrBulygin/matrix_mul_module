@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Sep 25 17:01:30 2022
+# Process ID: 14880
+# Current directory: C:/Users/admin/Desktop/activecore-master/designs/rtl/sigma/syn/syn_4stage/NEXYS4_DDR
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16180 C:\Users\admin\Desktop\activecore-master\designs\rtl\sigma\syn\syn_4stage\NEXYS4_DDR\NEXYS4_DDR.xpr
+# Log file: C:/Users/admin/Desktop/activecore-master/designs/rtl/sigma/syn/syn_4stage/NEXYS4_DDR/vivado.log
+# Journal file: C:/Users/admin/Desktop/activecore-master/designs/rtl/sigma/syn/syn_4stage/NEXYS4_DDR\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/admin/Desktop/activecore-master/designs/rtl/sigma/syn/syn_4stage/NEXYS4_DDR/NEXYS4_DDR.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source riscv_tb.tcl
+run all
+run all
+close_sim
+launch_simulation
+source riscv_tb.tcl
+run all
+run all
+run all
+relaunch_sim
+run all
+save_wave_config {C:/Users/admin/Desktop/activecore-master/designs/rtl/sigma/syn/syn_4stage/NEXYS4_DDR/riscv_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/admin/Desktop/activecore-master/designs/rtl/sigma/syn/syn_4stage/NEXYS4_DDR/riscv_tb_behav.wcfg
+set_property xsim.view C:/Users/admin/Desktop/activecore-master/designs/rtl/sigma/syn/syn_4stage/NEXYS4_DDR/riscv_tb_behav.wcfg [get_filesets sim_1]
+close_sim

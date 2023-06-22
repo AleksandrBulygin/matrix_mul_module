@@ -1,0 +1,1294 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Sun Oct 16 13:44:29 2022
+| Host         : DESKTOP-2FOCHV5 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file NEXYS4_DDR_methodology_drc_routed.rpt -pb NEXYS4_DDR_methodology_drc_routed.pb -rpx NEXYS4_DDR_methodology_drc_routed.rpx
+| Design       : NEXYS4_DDR
+| Device       : xc7a100tcsg324-3
+| Speed File   : -3
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 251
++-----------+------------------+------------------------------------------------+------------+
+| Rule      | Severity         | Description                                    | Violations |
++-----------+------------------+------------------------------------------------+------------+
+| TIMING-6  | Critical Warning | No common primary clock between related clocks | 2          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                   | 2          |
+| SYNTH-6   | Warning          | Timing of a block RAM might be sub-optimal     | 8          |
+| SYNTH-10  | Warning          | Wide multiplier                                | 79         |
+| TIMING-20 | Warning          | Non-clocked latch                              | 160        |
++-----------+------------------+------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_sys_clk and clk_out1_sys_clk_1 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_sys_clk] -to [get_clocks clk_out1_sys_clk_1]
+Related violations: <none>
+
+TIMING-6#2 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_sys_clk_1 and clk_out1_sys_clk are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_sys_clk_1] -to [get_clocks clk_out1_sys_clk]
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell sigma/Mat_mul55/cntr[2]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) sigma/Mat_mul55/C_reg[0][0]/CLR, sigma/Mat_mul55/C_reg[0][10]/CLR, sigma/Mat_mul55/C_reg[0][11]/CLR, sigma/Mat_mul55/C_reg[0][12]/CLR, sigma/Mat_mul55/C_reg[0][13]/CLR, sigma/Mat_mul55/C_reg[0][14]/CLR, sigma/Mat_mul55/C_reg[0][15]/CLR, sigma/Mat_mul55/C_reg[0][16]/CLR, sigma/Mat_mul55/C_reg[0][17]/CLR, sigma/Mat_mul55/C_reg[0][18]/CLR, sigma/Mat_mul55/C_reg[0][19]/CLR, sigma/Mat_mul55/C_reg[0][1]/CLR, sigma/Mat_mul55/C_reg[0][20]/CLR, sigma/Mat_mul55/C_reg[0][21]/CLR, sigma/Mat_mul55/C_reg[0][22]/CLR (the first 15 of 814 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell sigma/reset_sync/reset_syncbuf[3]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) sigma/reset_sync/reset_syncbuf_reg[0]/PRE, sigma/reset_sync/reset_syncbuf_reg[1]/PRE, sigma/reset_sync/reset_syncbuf_reg[2]/PRE, sigma/reset_sync/reset_syncbuf_reg[3]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance sigma/sigma_tile/ram/ram_dual/ram_reg_0, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#2 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance sigma/sigma_tile/ram/ram_dual/ram_reg_1, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#3 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance sigma/sigma_tile/ram/ram_dual/ram_reg_2, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#4 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance sigma/sigma_tile/ram/ram_dual/ram_reg_3, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#5 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance sigma/sigma_tile/ram/ram_dual/ram_reg_4, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#6 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance sigma/sigma_tile/ram/ram_dual/ram_reg_5, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#7 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance sigma/sigma_tile/ram/ram_dual/ram_reg_6, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-6#8 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance sigma/sigma_tile/ram/ram_dual/ram_reg_7, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_0_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_0_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_0_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#4 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_10_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#5 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_10_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#6 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_10_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#7 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_12_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#8 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_12_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#9 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_12_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#10 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_13_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#11 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_13_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#12 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_13_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#13 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_14_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#14 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_14_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#15 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_14_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#16 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_15_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#17 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_15_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#18 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_15_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#19 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_16_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#20 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_16_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#21 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_16_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#22 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_18_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#23 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_18_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#24 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_18_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#25 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_19_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#26 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_19_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#27 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_19_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#28 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_1_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#29 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_1_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#30 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_1_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#31 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_20_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#32 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_20_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#33 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_20_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#34 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_21_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#35 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_21_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#36 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_21_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#37 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_22_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#38 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_22_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#39 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_22_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#40 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_24_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#41 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_24_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#42 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_24_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#43 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_25_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#44 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_25_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#45 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_25_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#46 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_26_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#47 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_26_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#48 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_26_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#49 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_27_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#50 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_27_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#51 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_27_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#52 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_28_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#53 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_28_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#54 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_28_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#55 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_2_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#56 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_2_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#57 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_2_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#58 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_3_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#59 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_3_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#60 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_3_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#61 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_4_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#62 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_4_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#63 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_4_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#64 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_6_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#65 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_6_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#66 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_6_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#67 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_7_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#68 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_7_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#69 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_7_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#70 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_8_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#71 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_8_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#72 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_8_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#73 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_9_in of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#74 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_9_in__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#75 Warning
+Wide multiplier  
+Detected multiplier at sigma/Mat_mul55/p_9_in__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#76 Warning
+Wide multiplier  
+Detected multiplier at sigma/sigma_tile/genexu_MUL_DIV/riscv_multiplier/mult_result_w of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#77 Warning
+Wide multiplier  
+Detected multiplier at sigma/sigma_tile/genexu_MUL_DIV/riscv_multiplier/mult_result_w__0 of size 16x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#78 Warning
+Wide multiplier  
+Detected multiplier at sigma/sigma_tile/genexu_MUL_DIV/riscv_multiplier/mult_result_w__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#79 Warning
+Wide multiplier  
+Detected multiplier at sigma/sigma_tile/genexu_MUL_DIV/riscv_multiplier/mult_result_w__2 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][0] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][10] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][11] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][12] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][13] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][14] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][15] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][16] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][17] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][18] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][19] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][1] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][20] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][21] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][22] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][23] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][24] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][25] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][26] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][27] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][28] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][29] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][2] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][30] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][31] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][3] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][4] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][5] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][6] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][7] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][8] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[0][9] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[0][9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][0] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][10] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][11] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][12] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][13] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][14] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][15] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][16] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][17] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][18] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][19] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][1] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][20] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][21] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][22] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][23] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#49 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][24] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#50 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][25] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#51 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][26] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#52 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][27] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#53 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][28] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#54 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][29] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#55 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][2] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#56 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][30] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#57 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][31] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#58 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][3] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#59 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][4] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#60 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][5] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#61 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][6] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#62 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][7] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#63 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][8] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#64 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[1][9] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[1][9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#65 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][0] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#66 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][10] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#67 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][11] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#68 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][12] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#69 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][13] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#70 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][14] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#71 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][15] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#72 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][16] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#73 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][17] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#74 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][18] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#75 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][19] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#76 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][1] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#77 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][20] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#78 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][21] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#79 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][22] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#80 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][23] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#81 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][24] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#82 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][25] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#83 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][26] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#84 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][27] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#85 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][28] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#86 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][29] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#87 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][2] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#88 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][30] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#89 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][31] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#90 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][3] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#91 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][4] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#92 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][5] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#93 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][6] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#94 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][7] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#95 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][8] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#96 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[2][9] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[2][9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#97 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][0] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#98 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][10] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#99 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][11] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#100 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][12] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#101 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][13] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#102 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][14] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#103 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][15] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#104 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][16] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#105 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][17] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#106 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][18] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#107 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][19] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#108 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][1] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#109 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][20] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#110 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][21] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#111 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][22] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#112 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][23] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#113 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][24] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#114 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][25] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#115 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][26] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#116 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][27] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#117 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][28] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#118 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][29] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#119 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][2] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#120 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][30] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#121 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][31] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#122 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][3] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#123 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][4] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#124 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][5] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#125 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][6] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#126 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][7] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#127 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][8] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#128 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[3][9] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[3][9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#129 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][0] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#130 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][10] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#131 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][11] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#132 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][12] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#133 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][13] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#134 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][14] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#135 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][15] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#136 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][16] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#137 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][17] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#138 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][18] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#139 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][19] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#140 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][1] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#141 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][20] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#142 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][21] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#143 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][22] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#144 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][23] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#145 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][24] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#146 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][25] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#147 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][26] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#148 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][27] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#149 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][28] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#150 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][29] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#151 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][2] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#152 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][30] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#153 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][31] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#154 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][3] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#155 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][4] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#156 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][5] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#157 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][6] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#158 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][7] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#159 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][8] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#160 Warning
+Non-clocked latch  
+The latch sigma/Mat_mul55/Result_reg[4][9] cannot be properly analyzed as its control pin sigma/Mat_mul55/Result_reg[4][9]/G is not reached by a timing clock
+Related violations: <none>
+
+

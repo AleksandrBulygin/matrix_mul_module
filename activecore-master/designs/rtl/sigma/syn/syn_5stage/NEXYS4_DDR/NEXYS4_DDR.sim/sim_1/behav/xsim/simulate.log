@@ -1,0 +1,87 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+WARNING: Insufficient data from the input file for $fread
+
+##################################
+#### Loading elf file: C:/Users/admin/Desktop/activecore-master/designs/rtl/sigma/sw/apps/matrix_mul.riscv
+e_machine: 0x000000f3 (   RISC-V)
+e_phnum: 0x00000001
+---- HEADER: 0 ----
+p_type: 0x00000001
+p_offset: 0x00000000
+p_vaddr: 0x00000000
+p_paddr: 0x00000000
+p_filesz: 0x000008b0
+p_memsz: 0x000008b0
+p_flags: 0x00000007
+p_align: 0x00001000
+##################################
+
+### SIMULATION STARTED ###
+UDM RD32: addr: 0x00006000, data: 0x000061a2
+UDM RD32: addr: 0x00006004, data: 0x00007075
+UDM RD32: addr: 0x00006008, data: 0x00004409
+UDM RD32: addr: 0x0000600c, data: 0x00006175
+UDM RD32: addr: 0x00006010, data: 0x00009eff
+UDM RD32: addr: 0x00006014, data: 0x00006441
+UDM RD32: addr: 0x00006018, data: 0x00006aa0
+UDM RD32: addr: 0x0000601c, data: 0x00003c87
+UDM RD32: addr: 0x00006020, data: 0x0000416e
+UDM RD32: addr: 0x00006024, data: 0x0000534c
+UDM RD32: addr: 0x00006028, data: 0x00002abc
+UDM RD32: addr: 0x0000602c, data: 0x00003aa2
+UDM RD32: addr: 0x00006030, data: 0x00004705
+UDM RD32: addr: 0x00006034, data: 0x00003e21
+UDM RD32: addr: 0x00006038, data: 0x00004cbf
+UDM RD32: addr: 0x0000603c, data: 0x000035d1
+UDM RD32: addr: 0x00006040, data: 0x00006f0b
+UDM RD32: addr: 0x00006044, data: 0x000071f4
+UDM RD32: addr: 0x00006048, data: 0x00005219
+UDM RD32: addr: 0x0000604c, data: 0x00006b95
+UDM RD32: addr: 0x00006050, data: 0x0000b6a4
+UDM RD32: addr: 0x00006054, data: 0x00006bd5
+UDM RD32: addr: 0x00006058, data: 0x00006f02
+UDM RD32: addr: 0x0000605c, data: 0x000051bd
+UDM RD32: addr: 0x00006060, data: 0x00005bdf
+UDM RD32: addr: 0x00006064, data: 0x0000740d
+UDM RD32: addr: 0x00006068, data: 0x000050a4
+UDM RD32: addr: 0x0000606c, data: 0x00004b61
+UDM RD32: addr: 0x00006070, data: 0x000099f7
+UDM RD32: addr: 0x00006074, data: 0x000068f0
+UDM RD32: addr: 0x00006078, data: 0x0000666d
+UDM RD32: addr: 0x0000607c, data: 0x00004870
+UDM RD32: addr: 0x00006080, data: 0x00006403
+UDM RD32: addr: 0x00006084, data: 0x000067ec
+UDM RD32: addr: 0x00006088, data: 0x000038ed
+UDM RD32: addr: 0x0000608c, data: 0x000063c8
+UDM RD32: addr: 0x00006090, data: 0x00007f6f
+UDM RD32: addr: 0x00006094, data: 0x0000623a
+UDM RD32: addr: 0x00006098, data: 0x0000651b
+UDM RD32: addr: 0x0000609c, data: 0x00004916
+UDM RD32: addr: 0x000060a0, data: 0x0000593c
+UDM RD32: addr: 0x000060a4, data: 0x0000605a
+UDM RD32: addr: 0x000060a8, data: 0x000039f3
+UDM RD32: addr: 0x000060ac, data: 0x00004a5b
+UDM RD32: addr: 0x000060b0, data: 0x000088d7
+UDM RD32: addr: 0x000060b4, data: 0x00005abf
+UDM RD32: addr: 0x000060b8, data: 0x000056ac
+UDM RD32: addr: 0x000060bc, data: 0x00003b31
+UDM RD32: addr: 0x000060c0, data: 0x000050ec
+UDM RD32: addr: 0x000060c4, data: 0x000067d2
+UDM RD32: addr: 0x000060c8, data: 0x00004268
+UDM RD32: addr: 0x000060cc, data: 0x00004538
+UDM RD32: addr: 0x000060d0, data: 0x0000765f
+UDM RD32: addr: 0x000060d4, data: 0x00005904
+UDM RD32: addr: 0x000060d8, data: 0x00005c69
+UDM RD32: addr: 0x000060dc, data: 0x00004306
+UDM RD32: addr: 0x000060e0, data: 0x000060ac
+UDM RD32: addr: 0x000060e4, data: 0x00007146
+UDM RD32: addr: 0x000060e8, data: 0x00005aed
+UDM RD32: addr: 0x000060ec, data: 0x00005657
+UDM RD32: addr: 0x000060f0, data: 0x0000a930
+UDM RD32: addr: 0x000060f4, data: 0x000066d2
+UDM RD32: addr: 0x000060f8, data: 0x000068b3
+UDM RD32: addr: 0x000060fc, data: 0x0000507f
+ 64 tests completed with   0 errors
+### TEST PROCEDURE FINISHED ###
+$stop called at time : 130636935 ps : File "C:/Users/admin/Desktop/activecore-master/designs/rtl/sigma/tb/riscv_tb.sv" Line 159

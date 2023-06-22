@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../NEXYS4_DDR.srcs/sources_1/ip/sys_clk" --include "../../../../../../../../sigma_tile/hw" --include "../../../../../../../../sigma_tile/hw/riscv/coregen/riscv_4stage/sverilog" --include "../../../../../../../../sigma_tile/hw/riscv/coregen/riscv_5stage/sverilog" --include "../../../../../../../../sigma_tile/hw/riscv/coregen/riscv_1stage/sverilog" --include "../../../../../../../../sigma_tile/hw/riscv/coregen/riscv_6stage/sverilog" --include "../../../../../../../../sigma_tile/hw/riscv/coregen/riscv_2stage/sverilog" --include "../../../../../../../../sigma_tile/hw/riscv/coregen/riscv_3stage/sverilog" --include "../../../../../../../../udm/tb" \
+"../../../../../../../hw/matrix_mul.sv" \
+"../../../../NEXYS4_DDR.srcs/sim_1/new/matMul_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

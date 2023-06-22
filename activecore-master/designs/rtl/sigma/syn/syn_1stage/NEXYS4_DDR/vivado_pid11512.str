@@ -1,0 +1,141 @@
+/*
+
+Xilinx Vivado v2019.1 (64-bit) [Major: 2019, Minor: 1]
+SW Build: 2552052 on Fri May 24 14:49:42 MDT 2019
+IP Build: 2548770 on Fri May 24 18:01:18 MDT 2019
+
+Process ID (PID): 11512
+License: Customer
+
+Current time: 	Thu Jun 22 20:50:10 MSK 2023
+Time zone: 	Moscow Standard Time (Europe/Moscow)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 22 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Vivado/2019.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Vivado/2019.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	admin
+User home directory: C:/Users/admin
+User working directory: C:/Users/admin/Desktop/учёба/PiFU/activecore-master/designs/rtl/sigma/syn/syn_1stage/NEXYS4_DDR
+User country: 	RU
+User language: 	ru
+User locale: 	ru_RU
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2019.1
+RDI_DATADIR: D:/Vivado/2019.1/data
+RDI_BINDIR: D:/Vivado/2019.1/bin
+
+Vivado preferences file location: C:/Users/admin/AppData/Roaming/Xilinx/Vivado/2019.1/vivado.xml
+Vivado preferences directory: C:/Users/admin/AppData/Roaming/Xilinx/Vivado/2019.1/
+Vivado layouts directory: C:/Users/admin/AppData/Roaming/Xilinx/Vivado/2019.1/layouts
+PlanAhead jar file location: 	D:/Vivado/2019.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/admin/Desktop/учёба/PiFU/activecore-master/designs/rtl/sigma/syn/syn_1stage/NEXYS4_DDR/vivado.log
+Vivado journal file location: 	C:/Users/admin/Desktop/учёба/PiFU/activecore-master/designs/rtl/sigma/syn/syn_1stage/NEXYS4_DDR/vivado.jou
+Engine tmp dir: 	C:/Users/admin/Desktop/учёба/PiFU/activecore-master/designs/rtl/sigma/syn/syn_1stage/NEXYS4_DDR/.Xil/Vivado-11512-DESKTOP-2FOCHV5
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Vivado/2019.1/ids_lite/ISE
+XILINX_DSP: D:/Vivado/2019.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/2019.1
+XILINX_SDK: D:/SDK/2019.1
+XILINX_VIVADO: D:/Vivado/2019.1
+XILINX_VIVADO_HLS: D:/Vivado/2019.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 635 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// by (cl):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\admin\Desktop\учёба\PiFU\activecore-master\designs\rtl\sigma\syn\syn_1stage\NEXYS4_DDR\NEXYS4_DDR.xpr. Version: Vivado v2019.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/admin/Desktop/учёба/PiFU/activecore-master/designs/rtl/sigma/syn/syn_1stage/NEXYS4_DDR/NEXYS4_DDR.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/admin/Desktop/учёба/PiFU/activecore-master/designs/rtl/sigma/syn/syn_1stage/NEXYS4_DDR' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 79 MB (+80486kb) [00:00:11]
+// [Engine Memory]: 655 MB (+534903kb) [00:00:11]
+// [GUI Memory]: 111 MB (+28853kb) [00:00:12]
+// [Engine Memory]: 700 MB (+13242kb) [00:00:13]
+// [GUI Memory]: 122 MB (+6373kb) [00:00:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  4226 ms.
+// Tcl Message: open_project C:/Users/admin/Desktop/учёба/PiFU/activecore-master/designs/rtl/sigma/syn/syn_1stage/NEXYS4_DDR/NEXYS4_DDR.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/admin/Desktop/учёба/PiFU/activecore-master/designs/rtl/sigma/syn/syn_1stage/NEXYS4_DDR' INFO: [Project 1-313] Project file moved from 'C:/Users/admin/Desktop/activecore-master/designs/rtl/sigma/syn/syn_1stage/NEXYS4_DDR' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2019.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 727 MB. GUI used memory: 57 MB. Current time: 6/22/23, 8:50:15 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1317 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 749.168 ; gain = 118.590 
+// [Engine Memory]: 802 MB (+70738kb) [00:00:17]
+// Project name: NEXYS4_DDR; location: C:/Users/admin/Desktop/учёба/PiFU/activecore-master/designs/rtl/sigma/syn/syn_1stage/NEXYS4_DDR; part: xc7a100tcsg324-3
+dismissDialog("Open Project"); // by (cl)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 32 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 5); // B (F, cl)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 5); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7); // B (F, cl)
+// PAPropertyPanels.initPanels (riscv_tb.sv) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, riscv_tb (riscv_tb.sv)]", 9, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, riscv_tb (riscv_tb.sv)]", 9, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 820 MB. GUI used memory: 62 MB. Current time: 6/22/23, 8:50:57 PM MSK
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_wrapper (cpu_wrapper.sv)]", 3, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, cpu_wrapper (cpu_wrapper.sv), genblk1.cpu_stub : cpu_stub (cpu_stub.sv)]", 4, false, false, false, false, false, true); // B (F, cl) - Double Click
+// Elapsed time: 15 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NEXYS4_DDR (NEXYS4_DDR.sv)]", 2); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NEXYS4_DDR (NEXYS4_DDR.sv), sigma : sigma (sigma.sv)]", 4); // B (F, cl)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NEXYS4_DDR (NEXYS4_DDR.sv), sigma : sigma (sigma.sv), sigma_tile : sigma_tile (sigma_tile.sv)]", 7); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NEXYS4_DDR (NEXYS4_DDR.sv), sigma : sigma (sigma.sv), sigma_tile : sigma_tile (sigma_tile.sv), irq_adapter : irq_adapter (irq_adapter.sv)]", 8, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NEXYS4_DDR (NEXYS4_DDR.sv), sigma : sigma (sigma.sv), sigma_tile : sigma_tile (sigma_tile.sv), irq_adapter : irq_adapter (irq_adapter.sv)]", 8, false, false, false, false, false, true); // B (F, cl) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NEXYS4_DDR (NEXYS4_DDR.sv), sigma : sigma (sigma.sv), sigma_tile : sigma_tile (sigma_tile.sv), genexu_MUL_DIV : genexu_MUL_DIV (genexu_MUL_DIV.sv)]", 9, true); // B (F, cl) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NEXYS4_DDR (NEXYS4_DDR.sv), sigma : sigma (sigma.sv), sigma_tile : sigma_tile (sigma_tile.sv), genexu_MUL_DIV : genexu_MUL_DIV (genexu_MUL_DIV.sv)]", 9, true, false, false, false, false, true); // B (F, cl) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NEXYS4_DDR (NEXYS4_DDR.sv), sigma : sigma (sigma.sv), sigma_tile : sigma_tile (sigma_tile.sv), coproc_custom0_wrapper : coproc_custom0_wrapper (coproc_custom0_wrapper.sv)]", 12, false); // B (F, cl)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, NEXYS4_DDR (NEXYS4_DDR.sv), sigma : sigma (sigma.sv), sigma_tile : sigma_tile (sigma_tile.sv), coproc_custom0_wrapper : coproc_custom0_wrapper (coproc_custom0_wrapper.sv)]", 12, false, false, false, false, false, true); // B (F, cl) - Double Click
